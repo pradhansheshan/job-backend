@@ -25,6 +25,9 @@ jobs:
           distribution: 'microsoft'
 
       - name: Build with Maven
+        env:
+          SPRING_CLOUD_AZURE_STORAGE_ACCOUNT_NAME: $(CONTAINER)
+          SPRING_CLOUD_AZURE_STORAGE_ACCOUNT_KEY: $(ACCOUNT_KEY)
         run: mvn clean install
 
       - name: Upload artifact for deployment job
