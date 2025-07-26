@@ -45,7 +45,9 @@ public class FormController {
 
     @PostMapping("/test")
     public String testMethod() {
-        return "Hello from test method!";
+        return "Hello from test method 2nd!";
     }   
+
+    
     
 }
